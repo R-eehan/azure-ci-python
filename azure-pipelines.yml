@@ -20,6 +20,9 @@ strategy:
       python.version: '3.7'
 
 steps:
+- task: BrowserStackConfig@0
+  inputs:
+    BrowserStackServiceEndPoint: 'BrowserStack connection'
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
@@ -34,3 +37,5 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- task: BrowserStackResults@0
