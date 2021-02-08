@@ -17,6 +17,8 @@ steps:
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStack connection'
+    browserstackLocal: true
+    bsLocalOptions: '{"verbose": "true", "forceLocal": "true"}'
 - task: UsePythonVersion@0
   inputs:
     versionSpec: '$(python.version)'
