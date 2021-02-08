@@ -14,6 +14,10 @@ strategy:
       python.version: '3.7'
 
 steps:
+- script: |
+    curl https://hub-cloud.browserstack.com --verbose
+- script: |
+    curl https://local.browserstack.com/local-debug/https --verbose
 - task: BrowserStackConfig@0
   inputs:
     BrowserStackServiceEndPoint: 'BrowserStack connection'
