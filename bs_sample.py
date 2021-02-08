@@ -12,7 +12,9 @@ desired_cap = {
  'name': 'BStack-[Python] Sample Test',
  'build': 'Azure CI integration',
  'browserstack.user': os.getenv("BROWSERSTACK_USERNAME"),
- 'browserstack.key': os.getenv("BROWSERSTACK_ACCESS_KEY")
+ 'browserstack.key': os.getenv("BROWSERSTACK_ACCESS_KEY"),
+ 'browserstack.local': os.getenv("BROWSERSTACK_LOCAL"),
+ 'browserstack.localIdentifier': os.getenv("BROWSERSTACK_LOCAL_IDENTIFIER")
 }
 driver = webdriver.Remote(
     command_executor='https://hub-cloud.browserstack.com/wd/hub',
